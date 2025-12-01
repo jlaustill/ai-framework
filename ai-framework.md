@@ -23,9 +23,9 @@ We present a practical, evidence-first framework for deciding when to use tradit
 
 ## 1. Introduction — from opinion to evidence
 
-AI capabilities have advanced rapidly in the last five years, with systems like GPT-4 and Claude reaching human-level performance on many tasks. This progress is exciting, but it also means that engineering teams must carefully measure where AI systems add value and where traditional software remains essential. The goal of this paper is pragmatic: when we assert "AI is better for X," we will attach (1) a testable hypothesis, (2) an experiment or measurement plan, and (3) the research or case studies that motivate it (e.g., recent AI reports, large-scale benchmarks, and real-world deployment experiences).
+AI capabilities have advanced rapidly in the last five years, with systems like GPT-4⁴ and Claude 3¹⁶ reaching human-level performance on many standardized benchmarks. This progress is exciting, but it also means that engineering teams must carefully measure where AI systems add value and where traditional software remains essential. The goal of this paper is pragmatic: when we assert "AI is better for X," we will attach (1) a testable hypothesis, (2) an experiment or measurement plan, and (3) the research or case studies that motivate it (e.g., recent AI reports, large-scale benchmarks, and real-world deployment experiences).
 
-**Why this matters:** Modern AI systems introduce new operational costs and failure patterns that differ from traditional software. Despite 78% of organizations using AI in at least one business function as of 2024²⁰, research shows that 70-85% of generative AI deployment efforts fail to meet their desired return on investment²⁴, with only 26% of companies generating tangible value from AI at scale²¹. A data-driven approach replaces hype with reproducible evidence.
+**Why this matters:** Modern AI systems introduce new operational costs and failure patterns that differ from traditional software. Despite 78% of organizations using AI in at least one business function as of 2024²², research shows that 70-85% of generative AI deployment efforts fail to meet their desired return on investment²⁴, with only 26% of companies generating tangible value from AI at scale²¹. A data-driven approach replaces hype with reproducible evidence.
 
 *(Key reading: Sculley et al., "Hidden Technical Debt in ML Systems"¹; OpenAI/Anthropic/Google production reports²; recent LLM capability & evaluation papers.)*
 
@@ -128,11 +128,11 @@ When both approaches can solve a task identically, cost becomes a critical decis
 ### **AI Model Costs (2024 Data)**
 
 **Current LLM Pricing:**
-- **GPT-4o**: $2.50 input / $10.00 output per million tokens²⁵
+- **GPT-4o**: $5.00 input / $20.00 output per million tokens (standard pricing)²⁵
 - **Claude 3.5 Sonnet**: $3.00 input / $15.00 output per million tokens²⁵
 - **Small models**: As low as $0.07 per million tokens (various providers)²⁶
 
-**Dramatic Cost Reductions:** The cost of GPT-3.5-level performance dropped from $20 per million tokens (November 2022) to $0.07 per million tokens (October 2024)—a **280-fold reduction** in 18 months²². LLM inference costs have dropped by 1,000x in just 3 years, with current decline rates of 9-900x per year depending on task complexity.
+**Dramatic Cost Reductions:** The cost of GPT-3.5-level performance dropped from $20 per million tokens (November 2022) to $0.07 per million tokens (October 2024)—a **280-fold reduction** in 18 months²². For some benchmarked tasks, LLM inference costs have dropped by 1,000x in just 3 years, with current decline rates of 9-900x per year depending on task complexity²².
 
 ### **Deterministic Algorithm Costs (2024 Data)**
 
@@ -160,11 +160,11 @@ When both approaches can solve a task identically, cost becomes a critical decis
 Beyond per-task costs, consider:
 - **Development time**: Varies significantly by task complexity and implementation requirements
 - **Maintenance**: Deterministic code requires ongoing updates; AI models require expensive retraining, data collection, and safety evaluation cycles
-- **Talent costs**: Machine learning engineers average $162K-$181K annually vs software engineers at ~$119K²⁸
+- **Talent costs**: Machine learning engineers typically earn 10-30% higher salaries than software engineers across recent US surveys²⁸
 - **Infrastructure**: AI workloads require GPU compute ($1.85-$8.00/hour for high-end GPUs)²⁹ vs standard CPU servers
 - **Monitoring**: AI requires drift detection and safety monitoring; deterministic systems need standard observability
 
-*Key insight: AI costs are dropping exponentially while deterministic costs remain stable, suggesting the cost advantage will increasingly favor AI solutions over time.*
+*Projection: If current trends in model pricing continue while CPU compute costs remain relatively stable, the cost advantage is likely to increasingly favor AI solutions over time.*
 
 ## 8. Closing thought
 
@@ -238,7 +238,7 @@ AI expands computing with enormous potential. But to make high-leverage, low-ris
 
 - OpenAI o1 System Card (2024)¹⁵ — breakthrough reasoning model with extensive safety evaluation and red-teaming; demonstrates improved chain-of-thought capabilities but also concerning deceptive behaviors.
 - Claude 3 Model Card (2024)¹⁶ — Anthropic's flagship multimodal model with enhanced constitutional AI training and safety features.
-- AI Safety Index 2025¹⁷ — comprehensive analysis showing 56.4% increase in AI incidents during 2024, highlighting production deployment risks.
+- AI Safety Index 2025¹⁷ — comprehensive analysis of AI safety practices, governance frameworks, and risk management approaches.
 - Apollo Research deceptive behavior study (2024)¹⁸ — evaluation of frontier AI models showing concerning scheming capabilities in o1 and other advanced models.
 - Sustainable ML monitoring research (2024)¹⁹ — addressing energy efficiency tradeoffs in concept drift detection for production systems.
 
