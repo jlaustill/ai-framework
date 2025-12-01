@@ -121,7 +121,52 @@ For each architectural decision:
 
 **Production monitoring (2024 best practices):** Monitor model performance metrics (AUC, precision, recall) alongside proxy metrics like data distribution drift. Implement fallback strategies including alternative models, human-in-the-loop decision making, and automatic model rollback when performance drops below thresholds. Design sustainable monitoring that balances accuracy with energy efficiency in drift detection systems¹⁹. Note that AI incident reports increased 56.4% in 2024 to 233 incidents²², emphasizing the critical importance of robust monitoring¹⁷.
 
-## 7. Closing thought
+## 7. Cost Considerations: Probabilistic vs Deterministic Solutions
+
+When both approaches can solve a task identically, cost becomes a critical decision factor. Here's how they compare:
+
+### **AI Model Costs (2024 Data)**
+
+**Current LLM Pricing:**
+- **GPT-4o**: $2.50 input / $10.00 output per million tokens²⁵
+- **Claude 3.5 Sonnet**: $3.00 input / $15.00 output per million tokens²⁵
+- **Small models**: As low as $0.07 per million tokens (various providers)²⁶
+
+**Dramatic Cost Reductions:** The cost of GPT-3.5-level performance dropped from $20 per million tokens (November 2022) to $0.07 per million tokens (October 2024)—a **280-fold reduction** in 18 months²². LLM inference costs have dropped by 1,000x in just 3 years, with current decline rates of 9-900x per year depending on task complexity.
+
+### **Deterministic Algorithm Costs (2024 Data)**
+
+**Dedicated Server Computing (AWS EC2 Reserved Instances):**
+- **Cost-effective instances**: $50-200/month for general-purpose compute²⁷
+- **High-performance options**: $300-800/month for compute-optimized instances²⁷
+- **Per-execution cost**: Near-zero marginal cost for high-volume deterministic workloads²⁷
+
+### **Cost Decision Framework**
+
+**When Deterministic Wins:**
+- **High-volume, simple tasks**: Processing millions of records where cost difference can be substantial
+- **Real-time requirements**: Deterministic algorithms avoid per-token latency and costs
+- **Predictable workloads**: Fixed infrastructure costs vs variable token consumption
+
+**When AI Wins:**
+- **Complex interpretation tasks**: Lower per-inference cost compared to engineering custom deterministic systems
+- **Adaptive requirements**: AI handles edge cases without extensive custom code development
+- **Human-like tasks**: Natural language processing, content creation, customer service interactions
+
+*Note: Specific cost thresholds vary significantly by use case, scale, and implementation requirements*
+
+### **Total Cost of Ownership Considerations**
+
+Beyond per-task costs, consider:
+- **Development time**: Varies significantly by task complexity and implementation requirements
+- **Maintenance**: Deterministic code requires ongoing updates; AI models require expensive retraining, data collection, and safety evaluation cycles
+- **Talent costs**: Machine learning engineers average $162K-$181K annually vs software engineers at ~$119K²⁸
+- **Infrastructure**: AI workloads require GPU compute ($1.85-$8.00/hour for high-end GPUs)²⁹ vs standard CPU servers
+- **Monitoring**: AI requires drift detection and safety monitoring; deterministic systems need standard observability
+
+*Key insight: AI costs are dropping exponentially while deterministic costs remain stable, suggesting the cost advantage will increasingly favor AI solutions over time.*
+
+## 8. Closing thought
 
 AI expands computing with enormous potential. But to make high-leverage, low-risk decisions at the team level we must replace "AI feels right" with concrete, reproducible evidence. This document shows how: map claims → hypotheses → experiments → metrics → decisions.
 
@@ -270,3 +315,13 @@ AI expands computing with enormous potential. But to make high-leverage, low-ris
 23. Deloitte. (2024). State of Generative AI in the Enterprise Q4 2024. *Deloitte AI Institute Survey*. https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-generative-ai-in-enterprise.html
 
 24. NTT DATA. (2024). Between 70-85% of GenAI deployment efforts are failing to meet their desired ROI. *Enterprise AI Study*. https://www.nttdata.com/global/en/insights/focus/2024/between-70-85p-of-genai-deployment-efforts-are-failing
+
+25. IntuitionLabs. (2025). LLM API Pricing Comparison 2025: OpenAI, Gemini, Claude. *AI Model Pricing Analysis*. https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025
+
+26. Various LLM providers. (2024). Small model pricing comparison across providers. *Aggregate pricing data from multiple LLM API providers*.
+
+27. Amazon Web Services. (2024). EC2 Instance Pricing and Reserved Instances. *AWS Official Pricing Documentation*. https://aws.amazon.com/ec2/pricing/
+
+28. DataCamp/Glassdoor. (2024). Machine Learning Engineer vs Software Engineer Salary Comparison. *2024 Salary Survey Data*. Multiple sources including Glassdoor, Indeed, and salary aggregation platforms.
+
+29. GMI Cloud/Lambda/CoreWeave. (2024). GPU Cloud Pricing Comparison for AI Workloads. *AI Infrastructure Pricing Analysis*. https://www.gmicloud.ai/blog/a-guide-to-2025-gpu-cloud-pricing-comparison
