@@ -44,12 +44,25 @@ The framework document provides:
 
 ## Working with This Repository
 
-Since this is primarily a research document repository:
+This is a **personal research documentation project** intended to become a blog post/academic paper:
+
+### Project Nature & Workflow
+- **No feature branches needed** - this is personal documentation, not collaborative code
+- **GPG signing required** - maintain security practices with YubiKey for all commits
+- **Research focus** - purely academic documentation, not software implementation
+- **Future goal** - convert to blog post after ensuring data accuracy and citation completeness
+
+### Document Management
 - **Primary Document**: Use `ai-framework.md` for the fully formatted version with working citations
 - **Citation Standards**: All academic papers are properly linked with working URLs to arXiv, official sources, or conference proceedings
 - **Markdown Conventions**: Follow established patterns for academic citation links using `[Author et al.][ref-key]` format
 - **Research Updates**: When adding new research or citations, maintain the evidence-based approach and include proper links in the References section
 - **Version Control**: Track research iterations and updates, especially when adding new literature or experimental results
+
+### Special Considerations
+- **No Unblocked MCP context** - this is a personal repo with no external codebase context
+- **Academic rigor** - focus on data-based accuracy and proper citation management
+- **Blog post preparation** - ensure content is accessible yet academically sound
 
 ### Citation Management
 
