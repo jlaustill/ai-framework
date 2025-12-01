@@ -127,10 +127,12 @@ When both approaches can solve a task identically, cost becomes a critical decis
 
 ### **AI Model Costs (2024 Data)**
 
-**Current LLM Pricing:**
-- **GPT-4o**: $5.00 input / $20.00 output per million tokens (standard pricing)²⁵
-- **Claude 3.5 Sonnet**: $3.00 input / $15.00 output per million tokens²⁵
+**Current LLM Pricing (as of late 2024/early 2025):**
+- **GPT-4o**: $2.50 input / $10.00 output per million tokens (OpenAI official pricing)²⁵
+- **Claude 3.5 Sonnet**: $3.00 input / $15.00 output per million tokens (Anthropic official pricing)³⁰
 - **Small models**: As low as $0.07 per million tokens (various providers)²⁶
+
+*Note: Pricing changes frequently; these numbers reflect current rates at time of publication.*
 
 **Dramatic Cost Reductions:** The cost of GPT-3.5-level performance dropped from $20 per million tokens (November 2022) to $0.07 per million tokens (October 2024)—a **280-fold reduction** in 18 months²². For some benchmarked tasks, LLM inference costs have dropped by 1,000x in just 3 years, with current decline rates of 9-900x per year depending on task complexity²².
 
@@ -160,7 +162,7 @@ When both approaches can solve a task identically, cost becomes a critical decis
 Beyond per-task costs, consider:
 - **Development time**: Varies significantly by task complexity and implementation requirements
 - **Maintenance**: Deterministic code requires ongoing updates; AI models require expensive retraining, data collection, and safety evaluation cycles
-- **Talent costs**: Machine learning engineers typically earn 10-30% higher salaries than software engineers across recent US surveys²⁸
+- **Talent costs**: Multiple US salary aggregators generally show ML engineer median salaries around 5-20% higher than comparable software engineers²⁸
 - **Infrastructure**: AI workloads require GPU compute ($1.85-$8.00/hour for high-end GPUs)²⁹ vs standard CPU servers
 - **Monitoring**: AI requires drift detection and safety monitoring; deterministic systems need standard observability
 
@@ -244,7 +246,7 @@ AI expands computing with enormous potential. But to make high-leverage, low-ris
 
 ### Industry Surveys and Deployment Data (2024)
 
-- McKinsey State of AI 2024²⁰ — comprehensive survey showing 78% of organizations now use AI in at least one business function, with rapid adoption growth.
+- McKinsey State of AI 2024²⁰ — comprehensive survey of AI and gen-AI adoption, value capture, and organizational challenges. Stanford's AI Index 2025²² reports that 78% of organizations used AI in 2024.
 - Boston Consulting Group AI Value Study (2024)²¹ — reveals only 26% of companies generate tangible value from AI at scale, with 74% struggling to move beyond proof-of-concept.
 - Stanford HAI AI Index 2025²² — documents 56.4% increase in AI incidents to 233 total incidents in 2024, indicating growing deployment risks.
 - Deloitte State of GenAI Enterprise Survey Q4 2024²³ — finds only 30% of AI experiments scale beyond prototyping, with enterprise adoption challenges.
@@ -316,7 +318,7 @@ AI expands computing with enormous potential. But to make high-leverage, low-ris
 
 24. NTT DATA. (2024). Between 70-85% of GenAI deployment efforts are failing to meet their desired ROI. *Enterprise AI Study*. https://www.nttdata.com/global/en/insights/focus/2024/between-70-85p-of-genai-deployment-efforts-are-failing
 
-25. IntuitionLabs. (2025). LLM API Pricing Comparison 2025: OpenAI, Gemini, Claude. *AI Model Pricing Analysis*. https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025
+25. OpenAI. (2024). OpenAI API Pricing. *Official OpenAI Pricing Documentation*. https://openai.com/pricing
 
 26. Various LLM providers. (2024). Small model pricing comparison across providers. *Aggregate pricing data from multiple LLM API providers*.
 
@@ -325,3 +327,5 @@ AI expands computing with enormous potential. But to make high-leverage, low-ris
 28. DataCamp/Glassdoor. (2024). Machine Learning Engineer vs Software Engineer Salary Comparison. *2024 Salary Survey Data*. Multiple sources including Glassdoor, Indeed, and salary aggregation platforms.
 
 29. GMI Cloud/Lambda/CoreWeave. (2024). GPU Cloud Pricing Comparison for AI Workloads. *AI Infrastructure Pricing Analysis*. https://www.gmicloud.ai/blog/a-guide-to-2025-gpu-cloud-pricing-comparison
+
+30. Anthropic. (2024). Claude API Pricing. *Official Anthropic Pricing Documentation*. https://www.anthropic.com/pricing
