@@ -121,7 +121,7 @@ For each architectural decision:
 
 **Production monitoring (2024 best practices):** Monitor model performance metrics (AUC, precision, recall) alongside proxy metrics like data distribution drift. Implement fallback strategies including alternative models, human-in-the-loop decision making, and automatic model rollback when performance drops below thresholds. Design sustainable monitoring that balances accuracy with energy efficiency in drift detection systems¹⁹. Note that AI incident reports increased 56.4% in 2024 to 233 incidents²², emphasizing the critical importance of robust monitoring¹⁷.
 
-## 7. Closing thought (practical humility)
+## 7. Closing thought
 
 AI expands computing with enormous potential. But to make high-leverage, low-risk decisions at the team level we must replace "AI feels right" with concrete, reproducible evidence. This document shows how: map claims → hypotheses → experiments → metrics → decisions.
 
